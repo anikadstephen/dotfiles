@@ -1,0 +1,56 @@
+# .always_forget.txt
+#
+# UNIX cheat sheet
+#
+# Anika Stephen <sanika@umich.edu>
+
+
+# Web Utilities
+python3 -m http.server 8000       # start a file server at ./ on port 8000
+python3 -m venv env               # create a virtual environment
+source env/bin/activate           # activate the virtual environment
+deactivate                        # deactivate virtual environment
+
+# Web Requests
+lynx {website}                   # command line web browser
+wget {website}                   # downloads html for the webpage
+curl {website}                   # dump html into the terminal
+curl --verbose {website} > index.html   # show request/response details
+
+# Text editting
+cat > secret.txt                 # write to file without text editor
+
+# Encryption
+gpg --symmetric secret.txt       # Encrypt file
+gpg --decrypt secret.txt.gpg     # decrypt file
+
+# Deletion
+shred {file}                   # Overwrites bytes for better deletion
+rm {file}                      # erase pointer to above file
+
+# Fun stuff
+telnet towel.blinkenlights.nl     # Star Wars in plain text
+^]^C                              # exit above command
+sl                                # train animation
+asciiquarium                      # aquarium animation
+curl "wttr.in/ann_arbor?Tn1"      # ann arbor weather
+
+# Markup
+grip {readme}                     # Render README.md files locally
+
+# Executables
+chmod + x {file}                  # Make file executable
+
+# Tmux
+tmux new -s [session name]        # Start a new named session
+ctrl+b d                          # Detach from session
+tmux ls                           # List sessions
+tmux a -t [name of session]       # attach to named session
+tmux kill-session -t [name of session] # kill named session
+ctrl+b "                          # split panes horizontally
+ctrl+b %                          # split panes vertically
+ctrl+b x                          # kill current pane
+ctrl+b [arrow key]                # move to another pane
+ctrl+b o                          # cycle through panes
+ctrl+b ;                          # cycle between previous and current pane
+tmux kill-server                  # kill tmux server and all sessions
